@@ -1,0 +1,36 @@
+{
+  "name": "polymer-demos",
+  "version": "0.0.1",
+  "description": "Polymer demos for everyone",
+  "main": "dist/polymer-demos.min.js",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --colors",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js --watch --colors"
+  },
+  "repository": {
+    "url": "git+https://github.com/DIYgod/polymer-demo.git",
+    "type": "git"
+  },
+  "author": "DIYgod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DIYgod/polymer-demo/issues"
+  },
+  "homepage": "https://github.com/DIYgod/polymer-demo#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
+    "webpack": "^4.1.1",
+    "webpack-cli": "2.1.4",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "@polymer/iron-input": "3.0.0-pre.19",
+    "@polymer/polymer": "3.0.2",
+    "@webcomponents/webcomponentsjs": "2.0.0",
+    "copy-webpack-plugin": "4.5.1"
+  }
+}

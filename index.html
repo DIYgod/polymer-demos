@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Polymer Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            --my-background: #eee;
+        }
+
+        body {
+            color: #333;
+        }
+
+        .container {
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            margin: 40px 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Polymer Demos</h1>
+        <h2>Custom element</h2>
+        <demo-custom-elements></demo-custom-elements>
+        <h2>Shadow dom</h2>
+        <demo-shadow-dom></demo-shadow-dom>
+        <p>I am outside of demo-shadow-dom. Because of encapsulation, demo-shadow-dom's styles won't leak to me.</p>
+        <h2>HTML templates</h2>
+        <demo-html-template>
+            <p>I'm a custom slot.</p>
+        </demo-html-template>
+        <h2>Data</h2>
+        <demo-data owner1="DIYgod1"></demo-data>
+        <h2>Lifecycle</h2>
+        <demo-lifecycle owner="DIYgod"></demo-lifecycle>
+        <h2>Events</h2>
+        <demo-events></demo-events>
+        <script>
+            document.querySelector('demo-events').addEventListener('diygod', function (e) {
+                alert(e.detail.msg);
+            });
+        </script>
+    </div>
+    <scirpt src="./dist/webcompoments-loader.js"></scirpt>
+    <script src="./dist/polymer-demos.js"></script>
+</body>
+
+</html>
